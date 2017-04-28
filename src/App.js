@@ -138,7 +138,7 @@ class App extends Component {
             style={{ width: "100%", height: 50, background: this.state.HEX }}
           />
           <input
-            defaultValue={this.state.HEX}
+            value={this.state.HEX}
             onKeyPress={this.handleInputChange.bind(this)}
           />
         </div>
