@@ -130,7 +130,7 @@ class App extends Component {
           max={100}
         />
 
-        <button onClick={() => this.setColorState("lighter")}>Lighten</button>
+        <button onClick={() => this.setColorState("lighter")}>Lighter</button>
         <button onClick={() => this.setColorState("darker")}>Darker</button>
 
         <div>
