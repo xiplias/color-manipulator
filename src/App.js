@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
-import Color from 'color'
-import Slider from 'rc-slider'
-import 'rc-slider/assets/index.css'
+import React, { Component } from "react"
+import Color from "color"
+import Slider from "rc-slider"
+import "rc-slider/assets/index.css"
 
 class App extends Component {
   constructor() {
@@ -14,7 +14,7 @@ class App extends Component {
       H: 0,
       S: 0,
       V: 0,
-      HEX: '#000000'
+      HEX: "#000000"
     }
   }
 
@@ -22,23 +22,23 @@ class App extends Component {
     const state = this.state
     let color
 
-    if (name === 'R' || name === 'G' || name === 'B') {
+    if (name === "R" || name === "G" || name === "B") {
       color = Color({
-        red: name === 'R' ? value : state.R,
-        green: name === 'G' ? value : state.G,
-        blue: name === 'B' ? value : state.B
+        red: name === "R" ? value : state.R,
+        green: name === "G" ? value : state.G,
+        blue: name === "B" ? value : state.B
       })
     }
 
-    if (name === 'H' || name === 'S' || name === 'V') {
+    if (name === "H" || name === "S" || name === "V") {
       color = Color({
-        hue: name === 'H' ? value : state.H,
-        saturation: name === 'S' ? value : state.S,
-        value: name === 'V' ? value : state.V
+        hue: name === "H" ? value : state.H,
+        saturation: name === "S" ? value : state.S,
+        value: name === "V" ? value : state.V
       })
     }
 
-    if (name === 'lighter') {
+    if (name === "lighter") {
       color = Color({
         hue: state.H,
         saturation: state.S,
@@ -47,7 +47,7 @@ class App extends Component {
       color.value(state.V + 10)
     }
 
-    if (name === 'darker') {
+    if (name === "darker") {
       color = Color({
         hue: state.H,
         saturation: state.S,
@@ -56,7 +56,7 @@ class App extends Component {
       color.value(state.V - 10)
     }
 
-    if (name === 'hex') {
+    if (name === "hex") {
       try {
         color = Color(value)
       } catch (err) {}
@@ -84,8 +84,8 @@ class App extends Component {
 
   handleInputChange(e) {
     console.log(e.key)
-    if (e.key === 'Enter') {
-      this.setColorState('hex', e.target.value)
+    if (e.key === "Enter") {
+      this.setColorState("hex", e.target.value)
     }
   }
 
@@ -130,12 +130,12 @@ class App extends Component {
           max={100}
         />
 
-        <button onClick={() => this.setColorState('lighter')}>Lighten</button>
-        <button onClick={() => this.setColorState('darker')}>Darker</button>
+        <button onClick={() => this.setColorState("lighter")}>Lighten</button>
+        <button onClick={() => this.setColorState("darker")}>Darker</button>
 
         <div>
           <div
-            style={{ width: '100%', height: 50, background: this.state.HEX }}
+            style={{ width: "100%", height: 50, background: this.state.HEX }}
           />
           <input
             defaultValue={this.state.HEX}
