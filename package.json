@@ -20,6 +20,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "lint": "prettier --write --no-semi src/**/*.js"
+    "lint": "prettier --write --no-semi src/**/*.js",
+    "deploy": "now;now alias"
   }
 }
